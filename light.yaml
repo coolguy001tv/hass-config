@@ -1,0 +1,33 @@
+# 灯
+defaults: &defaults
+  type: button
+  tap_action:
+    action: toggle
+
+type: vertical-stack
+cards:
+  - type: grid
+    title: 主卧
+    cards:
+      - <<: *defaults
+        entity: switch.zimi_dhkg02_be6f_left_switch_service
+        name: 衣帽间
+      - <<: *defaults
+        entity: switch.zimi_dhkg02_be6f_right_switch_service
+        name: 吊灯
+      - name: 厕所灯
+        <<: *defaults
+        entity: switch.zimi_dhkg01_37ac
+  - type: grid
+    title: 次卧
+    cards:
+      - <<: *defaults
+        name: 洗手间
+        entity: switch.zimi_dhkg0_d94f
+      - <<: *defaults
+        name: 吊灯
+        entity: switch.zimi_dhkg01_eebd
+  - type: grid
+    title: 书房
+    cards:
+      - <<: *defaults
