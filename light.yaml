@@ -62,6 +62,10 @@ cards:
         name: 次卧吊灯
         entity: switch.zimi_dhkg01_eebd
         <<: *defaults
+      -
+        name: 儿童房
+        entity: switch.zimi_dhkg01_f879
+        <<: *defaults
 
 
 
