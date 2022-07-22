@@ -1,0 +1,21 @@
+# 插座相关
+
+type: vertical-stack
+cards:
+  -
+    type: glance
+    entities:
+      - entity: sensor.chuangmi_212a01_dfde_temperature
+        name: 冰箱插座
+      - entity: sensor.chuangmi_212a01_5049_temperature
+        name: 书房插座
+    title: 插座温度
+  -
+    type: glance
+    title: 日用电量
+    entities:
+      - entity: sensor.chuangmi_212a01_dfde_power_cost_today
+        name: 冰箱
+      - entity: sensor.chuangmi_212a01_5049_power_cost_today
+        name: 书房插座
+

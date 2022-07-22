@@ -7,27 +7,62 @@ defaults: &defaults
 type: vertical-stack
 cards:
   - type: grid
-    title: 主卧
+    title: 常用
     cards:
-      - <<: *defaults
+      -
+        name: 主卧灯
+        entity: switch.zimi_dhkg02_be6f_right_switch_service
+        <<: *defaults
+      -
+        name: 灯带
+        entity: switch.cuco_cs2_aae9_right_switch_service
+        <<: *defaults
+      -
+        name: 书房灯
+        entity: switch.zimi_dhkg01_ee9a
+        <<: *defaults
+      -
         entity: switch.zimi_dhkg02_be6f_left_switch_service
         name: 衣帽间
-      - <<: *defaults
-        entity: switch.zimi_dhkg02_be6f_right_switch_service
-        name: 吊灯
-      - name: 厕所灯
         <<: *defaults
+      - name: 厨房灯
+        entity: switch.zimi_dhkg02_74cd_left_switch_service
+        <<: *defaults
+      - name: 床头灯
+        entity: switch.zimi_zncz01_be4a
+        <<: *defaults
+      - name: 书房风扇
+        entity: switch.chuangmi_212a01_5049_switch
+        <<: *defaults
+
+
+  - type: grid
+    title: 一般
+    cards:
+      - name: 主卧厕所灯
         entity: switch.zimi_dhkg01_37ac
+        <<: *defaults
+      - name: 阳台灯
+        entity: light.liang_yi_jia_led
+        <<: *defaults
+      - name: 生活阳台
+        entity: switch.zimi_dhkg02_74cd_right_switch_service
+        <<: *defaults
   - type: grid
-    title: 次卧
+    title: 不常用
     cards:
-      - <<: *defaults
-        name: 洗手间
+      - name: 玄关
+        entity: switch.cuco_cs2_aae9_left_switch_service
+        <<: *defaults
+      -
+        name: 次卧洗手间
         entity: switch.zimi_dhkg0_d94f
-      - <<: *defaults
-        name: 吊灯
+        <<: *defaults
+      -
+        name: 次卧吊灯
         entity: switch.zimi_dhkg01_eebd
-  - type: grid
-    title: 书房
-    cards:
-      - <<: *defaults
+        <<: *defaults
+
+
+
+
