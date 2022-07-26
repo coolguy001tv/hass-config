@@ -1,0 +1,23 @@
+type: custom:xiaomi-vacuum-map-card
+title: 我的扫地机
+map_source:
+  camera: camera.zhui_mi_sao_di_ji
+calibration_source:
+  camera: true
+entity: vacuum.dreame_p2027_924b_robot_cleaner
+vacuum_platform: default
+append_tiles: true
+tiles:
+  - label: 滤网剩余
+    entity: sensor.dreame_p2027_924b_filter_left_time
+    unit: 小时
+  - label: 主刷剩余
+    entity: sensor.dreame_p2027_924b_brush_left_time
+    unit: 小时
+  - label: 边刷剩余
+    entity: sensor.dreame_p2027_924b_brush_left_time_2
+    unit: 小时
+  - label: 充电状态
+    entity: sensor.dreame_p2027_924b_charging_state
+  - label: 扫地机状态
+    entity: sensor.dreame_p2027_924b_status
